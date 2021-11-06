@@ -11,8 +11,8 @@
      name:httpd
      state:started
      enabled=True
-  - name:"Dispaly static website"
+  - name: "Dispaly static website"
     copy:
-     src:index.html
+     src: index.html
      dest: /var/www/html
     
