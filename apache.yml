@@ -8,9 +8,9 @@
      state: "present"
   - name: Start Apache sever"
     service:
-     name:httpd
-     state:started
-     enabled=True
+     name: httpd
+     state: started
+     enabled: True
   - name: "Dispaly static website"
     copy:
      src: index.html
