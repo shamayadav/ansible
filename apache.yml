@@ -1,8 +1,18 @@
 ---
--hosts:webservers
- become:True
- tasks:
+- hosts: webservers
+  become: True
+  tasks:
   -name: Install Packages
    yum:
     name: "httpd"
+    state: "present"
+  -name: Start Apache sever"
+   service:
+    name:httpd
+    state:started
+    enabled=True
+  -name:"Dispaly static website"
+   copy:
+    src:index.html
+    dest: /var/www/html
     
